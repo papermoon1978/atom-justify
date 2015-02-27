@@ -10,6 +10,7 @@ module.exports = AtomJustify =
         # Register command that toggles this view
         @subscriptions.add atom.commands.add 'atom-workspace', 'atom-justify:createSelection': => @createSelection()
         @subscriptions.add atom.commands.add 'atom-workspace', 'atom-justify:justifyLeft': => @justify("left")
+        @subscriptions.add atom.commands.add 'atom-workspace', 'atom-justify:justifyCenter': => @justify("center")
         @subscriptions.add atom.commands.add 'atom-workspace', 'atom-justify:justifyRight': => @justify("right")
         @subscriptions.add atom.commands.add 'atom-workspace', 'atom-justify:justify': => @justify("toggle")
 

@@ -30,8 +30,14 @@ class AtomJustifyActions
 
     @justify: (position="toggle") ->
         if position == "toggle"
-            position = if @position == "" || @position == "left" then "right" else "left"
-            @position = position
+            if @position == "" || @position == "right"
+                position = "left"
+            else if @position == "left"
+                position = "center"
+            else
+                position = "right"
+
+        @position = position
 
         editor = atom.workspace.getActiveEditor()
         ranges = editor.getSelectedBufferRanges()
@@ -42,8 +48,14 @@ class AtomJustifyActions
                 l = text.length
                 diff = max - l
                 if diff > 0
-                    blanks = Array(++diff).join(" ")
-                    text = if position == "left" then text + blanks else blanks + text
+                    if @position == "center"
+                        f = Math.floor(diff/2)
+                        e = diff - f
+                        text = Array(++f).join(" ") + text + Array(++e).join(" ")
+                    else
+                        blanks = Array(++diff).join(" ")
+                        text = if position == "left" then text + blanks else blanks + text
+
                     editor.setTextInBufferRange(range, text)
 
         return

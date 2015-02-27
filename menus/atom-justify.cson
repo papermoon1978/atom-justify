@@ -13,7 +13,7 @@
         'label': 'atom-justify'
         'submenu': [
           {
-            'label': 'create Selection'
+            'label': 'create selection'
             'command': 'atom-justify:createSelection'
           },
           {
