@@ -1,0 +1,15 @@
+{
+  "name": "atom-justify",
+  "main": "./lib/atom-justify",
+  "version": "0.0.0",
+  "description": "small package to justify text in columns/block",
+  "activationCommands": {
+  },
+  "repository": "https://github.com/atom/atom-justify",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
