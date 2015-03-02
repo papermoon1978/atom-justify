@@ -14,6 +14,10 @@ Place two cursors at the outer bounds of your block (in the example above after 
 
 Now you can use 3 commands to justify the block -> ```JustifyLeft```, ```JustifyRight``` and ```Justify```. The last mentioned command will just switch between left and right.
 
+## See it in action
+
+![atom-justify](http://papermoon1978.github.io/atom-justify.gif)
+
 ## License
 
 MIT © [Andre Lerche](https://github.com/papermoon1978)
